@@ -31,8 +31,14 @@ namespace MyBusinessDashboard
             Login.Click += Login_Click;
             userID.Text = "Username";
             Password = PassBox.Password;
+            RegisterBtn.PointerReleased += registerBtn_OnClick;
         }
 
+        private void registerBtn_OnClick(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Register));
+        }
+        
         void Login_Click(object sender, RoutedEventArgs e)
         {
             //throw new NotImplementedException();
