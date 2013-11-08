@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -14,7 +14,6 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-
 // The Blank Application template is documented at http://go.microsoft.com/fwlink/?LinkId=234227
 
 namespace MyBusinessDashboard
@@ -24,8 +23,6 @@ namespace MyBusinessDashboard
     /// </summary>
     sealed partial class App : Application
     {
-
-
         /// <summary>
         /// Initializes the singleton application object.  This is the first line of authored code
         /// executed, and as such is the logical equivalent of main() or WinMain().
@@ -34,10 +31,6 @@ namespace MyBusinessDashboard
         {
             this.InitializeComponent();
             this.Suspending += OnSuspending;
-
-            
-            
-
         }
 
         /// <summary>
