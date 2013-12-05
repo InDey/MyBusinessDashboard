@@ -11,7 +11,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
-
+using Windows.System.Display;
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace MyBusinessDashboard
@@ -31,8 +31,13 @@ namespace MyBusinessDashboard
             Login = LoginBtn;
             Login.Click += Login_Click;
             userID.Text = "Username";
-            double scrnWidth = Width;
-            userID.Text = scrnWidth.ToString();
+            int scrnWidth = (int)Window.Current.Bounds.Width;
+            int scrnHeight = (int)Window.Current.Bounds.Height;
+            //userID.Text = scrnWidth.ToString();
+            theGrid.Width = scrnWidth;
+            theGrid.Height = scrnHeight;
+            BlueRct.Width = scrnWidth;
+            theCanvas.Width = scrnWidth;
             Password = PassBox.Password;
             RegisterBtn.PointerReleased += registerBtn_OnClick;
             
