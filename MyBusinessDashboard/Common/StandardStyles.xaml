@@ -1,4 +1,4 @@
-﻿<!--
+<!--
     This file contains XAML styles that simplify application development.
 
     These are not merely convenient, but are required by most Visual Studio project and item templates.
@@ -547,11 +547,13 @@
         <Setter Property="Content" Value="&#xE11A;"/>
     </Style>
     -->
+    
     <Style x:Key="HelpAppBarButtonStyle" TargetType="ButtonBase" BasedOn="{StaticResource AppBarButtonStyle}">
         <Setter Property="AutomationProperties.AutomationId" Value="HelpAppBarButton"/>
         <Setter Property="AutomationProperties.Name" Value="Help"/>
         <Setter Property="Content" Value="&#xE11B;"/>
     </Style>
+    
     <!--
     <Style x:Key="UploadAppBarButtonStyle" TargetType="ButtonBase" BasedOn="{StaticResource AppBarButtonStyle}">
         <Setter Property="AutomationProperties.AutomationId" Value="UploadAppBarButton"/>
@@ -614,7 +616,6 @@
         <Setter Property="Content" Value="&#xE127;"/>
     </Style>
     -->
-
     <!--
     <Style x:Key="WorldAppBarButtonStyle" TargetType="ButtonBase" BasedOn="{StaticResource AppBarButtonStyle}">
         <Setter Property="AutomationProperties.AutomationId" Value="WorldAppBarButton"/>
@@ -726,7 +727,6 @@
         <Setter Property="AutomationProperties.Name" Value="Contact"/>
         <Setter Property="Content" Value="&#xE13D;"/>
     </Style>
-
     -->
 
     <!--
@@ -747,11 +747,13 @@
         <Setter Property="Content" Value="&#xE142;"/>
     </Style>
     -->
+    
     <Style x:Key="LogoutAppBarButtonStyle" TargetType="ButtonBase" BasedOn="{StaticResource AppBarButtonStyle}">
         <Setter Property="AutomationProperties.AutomationId" Value="LogoutAppBarButton"/>
         <Setter Property="AutomationProperties.Name" Value="Logout"/>
         <Setter Property="Content" Value="&#xE143;"/>
     </Style>
+    
     <!--
     <Style x:Key="KeyboardAppBarButtonStyle" TargetType="ButtonBase" BasedOn="{StaticResource AppBarButtonStyle}">
         <Setter Property="AutomationProperties.AutomationId" Value="KeyboardAppBarButton"/>
@@ -872,11 +874,13 @@
         <Setter Property="Content" Value="&#xE15E;"/>
     </Style>
     -->
+    
     <Style x:Key="MessageAppBarButtonStyle" TargetType="ButtonBase" BasedOn="{StaticResource AppBarButtonStyle}">
         <Setter Property="AutomationProperties.AutomationId" Value="MessageAppBarButton"/>
         <Setter Property="AutomationProperties.Name" Value="Instant Message"/>
         <Setter Property="Content" Value="&#xE15F;"/>
     </Style>
+    
     <!--
     <Style x:Key="Page2AppBarButtonStyle" TargetType="ButtonBase" BasedOn="{StaticResource AppBarButtonStyle}">
         <Setter Property="AutomationProperties.AutomationId" Value="Page2AppBarButton"/>
@@ -1021,13 +1025,11 @@
         <Setter Property="AutomationProperties.Name" Value="Presence"/>
         <Setter Property="Content" Value="&#xE181;"/>
     </Style>
-   
     <Style x:Key="PriorityAppBarButtonStyle" TargetType="ButtonBase" BasedOn="{StaticResource AppBarButtonStyle}">
         <Setter Property="AutomationProperties.AutomationId" Value="PriorityAppBarButton"/>
         <Setter Property="AutomationProperties.Name" Value="Priority"/>
         <Setter Property="Content" Value="&#xE182;"/>
     </Style>
-    
     <Style x:Key="UploadSkyDriveAppBarButtonStyle" TargetType="ButtonBase" BasedOn="{StaticResource AppBarButtonStyle}">
         <Setter Property="AutomationProperties.AutomationId" Value="UploadSkyDriveAppBarButton"/>
         <Setter Property="AutomationProperties.Name" Value="Skydrive"/>
@@ -1197,11 +1199,13 @@
         <Setter Property="Content" Value="&#xE1A4;"/>
     </Style>
     -->
+    
     <Style x:Key="OpenFileAppBarButtonStyle" TargetType="ButtonBase" BasedOn="{StaticResource AppBarButtonStyle}">
         <Setter Property="AutomationProperties.AutomationId" Value="OpenFileAppBarButton"/>
         <Setter Property="AutomationProperties.Name" Value="View Files"/>
         <Setter Property="Content" Value="&#xE1A5;"/>
     </Style>
+    
     <!--
     <Style x:Key="OtherUserAppBarButtonStyle" TargetType="ButtonBase" BasedOn="{StaticResource AppBarButtonStyle}">
         <Setter Property="AutomationProperties.AutomationId" Value="OtherUserAppBarButton"/>
@@ -1375,6 +1379,7 @@
         <Setter Property="AutomationProperties.Name" Value="Add Contact"/>
         <Setter Property="Content" Value="&#xE1E2;"/>
     </Style>
+    
     <!--
     <Style x:Key="TouchPointerAppBarButtonStyle" TargetType="ButtonBase" BasedOn="{StaticResource AppBarButtonStyle}">
         <Setter Property="AutomationProperties.AutomationId" Value="TouchPointerAppBarButton"/>
