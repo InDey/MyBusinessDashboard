@@ -23,6 +23,7 @@ namespace MyBusinessDashboard
     {
         public MainPage()
         {
+            
             this.InitializeComponent();
             TextBox userID = (TextBox)this.UserBox;
             string Password;
@@ -30,8 +31,11 @@ namespace MyBusinessDashboard
             Login = LoginBtn;
             Login.Click += Login_Click;
             userID.Text = "Username";
+            double scrnWidth = Width;
+            userID.Text = scrnWidth.ToString();
             Password = PassBox.Password;
             RegisterBtn.PointerReleased += registerBtn_OnClick;
+            
         }
 
         private void registerBtn_OnClick(object sender, RoutedEventArgs e)
