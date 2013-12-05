@@ -10,23 +10,29 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d" Background="White">
 
-    <Page.Resources>
-
-        <!-- Collection of items displayed by this page -->
-        <CollectionViewSource
-            x:Name="itemsViewSource"
-            Source="{Binding Items}"/>
-
-        <!-- TODO: Delete this line if the key AppName is declared in App.xaml -->
-        <x:String x:Key="AppName">My Application</x:String>
-    </Page.Resources>
-
-    <!--
+    <Page.BottomAppBar>
+        <AppBar BorderBrush="{x:Null}" Background="#FF3C58FF">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Orientation="Horizontal" Grid.ColumnSpan="2" Margin="0">
+                    <Button Click="AddContact_Click" Style="{StaticResource ResourceKey=AddContactAppBarButtonStyle}" Margin="50,0,0,0"/>
+                    <Button Click="InstantMessage_Click" Style="{StaticResource ResourceKey=MessageAppBarButtonStyle}"/>
+                    <Button Click="OpenFileCloud_Click" Style="{StaticResource ResourceKey=OpenFileAppBarButtonStyle}"/>
+                    <Button Click="Help_Click" Style="{StaticResource ResourceKey=HelpAppBarButtonStyle}" Margin="750,0,0,0"/>
+                    <Button Click="Logout_Click" Style="{StaticResource ResourceKey=LogoutAppBarButtonStyle}"/>
+                </StackPanel>
+            </Grid>
+        </AppBar>
+    </Page.BottomAppBar>
+        <!--
         This grid acts as a root panel for the page that defines two rows:
         * Row 0 contains the back button and page title
         * Row 1 contains the rest of the page layout
     -->
-    <Grid Style="{StaticResource LayoutRootStyle}" Background="White">
+    <Grid Style="{StaticResource LayoutRootStyle}" Background="Black">
         <Grid.RowDefinitions>
             <RowDefinition Height="140"/>
             <RowDefinition Height="*"/>
@@ -46,12 +52,25 @@
             	<ColumnDefinition Width="Auto"/>
             	<ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <TextBlock x:Name="pageTitle" Grid.Column="1" Text="Home" IsHitTestVisible="false" Style="{StaticResource PageHeaderTextStyle}" Margin="150,0,1042,46" Foreground="#DE000000"/>
+            <TextBlock x:Name="pageTitle" Grid.Column="1" IsHitTestVisible="false" Style="{StaticResource PageHeaderTextStyle}" Margin="136,0,652,46" Foreground="#DE000000">
+            	<Run Foreground="#DEFFFFFF" Text="MyBusiness"/>
+            	<Run Foreground="#FF3C58FF" Text="Dashboard"/>
+            </TextBlock>
         </Grid>
         <Grid HorizontalAlignment="Left" Height="544" Margin="15,18,0,0" Grid.Row="1" VerticalAlignment="Top" Width="843">
-        	<Button x:Name="ContactBtn" Content="Contacts" HorizontalAlignment="Left" VerticalAlignment="Top" Height="169" Width="214" BorderBrush="{x:Null}" Background="#FF383838"/>
-        	<Button x:Name="CalendarBtn" Content="Calendar" HorizontalAlignment="Left" VerticalAlignment="Top" Height="169" Width="214" Margin="243,0,0,0" BorderBrush="{x:Null}" Background="#FF383838"/>
-        	<Button x:Name="NewsBtn" Content="Industry News" HorizontalAlignment="Left" VerticalAlignment="Top" Height="169" Width="214" Margin="504,0,0,0" BorderBrush="{x:Null}" Background="#FF383838"/>
+        	<Button x:Name="ContactBtn" Content="Contacts" HorizontalAlignment="Left" VerticalAlignment="Top" Height="169" Width="214" BorderBrush="{x:Null}" Background="#FF3C58FF"/>
+        	<Button x:Name="CalendarBtn" Content="Calendar" HorizontalAlignment="Left" VerticalAlignment="Top" Height="169" Width="214" Margin="247,0,0,0" BorderBrush="{x:Null}" Background="#FF383838"/>
+        	<Button x:Name="FileBtn" Content="Company Cloud" HorizontalAlignment="Left" VerticalAlignment="Top" Height="169" Width="214" Margin="493,0,0,0" BorderBrush="{x:Null}" Background="#FF3C58FF"/>
+        	<Button x:Name="NewsBtn" Content="News" HorizontalAlignment="Left" VerticalAlignment="Top" Height="169" Width="214" BorderBrush="{x:Null}" Background="#FF383838" Margin="0,188,0,0"/>
+        	<Button x:Name="EmailBtn" Content="Emails" HorizontalAlignment="Left" VerticalAlignment="Top" Height="169" Width="214" Margin="247,188,0,0" BorderBrush="{x:Null}" Background="#FF3C58FF"/>
+        	<Button x:Name="SettingsBtn" Content="Settings&#xD;&#xA;" HorizontalAlignment="Left" VerticalAlignment="Top" Height="169" Width="214" Margin="493,188,0,0" BorderBrush="{x:Null}" Background="#FF383838"/>
+        </Grid>
+        <Grid HorizontalAlignment="Left" Height="766" VerticalAlignment="Top" Width="474" Margin="892,2,0,0" Grid.RowSpan="2">
+        	<GridView HorizontalAlignment="Left" VerticalAlignment="Top" Width="478" Margin="-4,0,0,-2" Height="768" BorderThickness="2,0,0,0" BorderBrush="#FF383838"/>
+        	<Button x:Name="NewsFeedCNTab" Content="Company News" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="4,0,308,730" BorderThickness="0,0,0,2" BorderBrush="{x:Null}"/>
+        	<Button x:Name="NewsFeedChatTab" Content="Chat" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="178,0,150,730" BorderThickness="0,0,0,2" BorderBrush="{x:Null}"/>
+        	<TextBlock x:Name="curDatetb" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" FontSize="20" Margin="-573,-4,489,702" Height="68" Width="558" TextAlignment="Right" Foreground="#DEFFFFFF"/>
+        	<Button x:Name="NewsFeedEventsTab" Content="Events" HorizontalAlignment="Stretch" VerticalAlignment="Bottom" Margin="334,0,6,730" BorderThickness="0,0,0,2" Height="36" BorderBrush="{x:Null}"/>
         </Grid>
 
         <VisualStateManager.VisualStateGroups>
