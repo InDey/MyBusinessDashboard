@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -12,7 +12,9 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
+
 // The Basic Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234237
+
 
 namespace MyBusinessDashboard
 {
@@ -25,13 +27,16 @@ namespace MyBusinessDashboard
         {
             this.InitializeComponent();
 
+
             RegisterAccountBtn.Click += registerAccount_OnClick;
         }
+
 
         private void registerAccount_OnClick(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(MainPage));
         }
+
 
         /// <summary>
         /// Populates the page with content passed during navigation.  Any saved state is also
@@ -46,6 +51,7 @@ namespace MyBusinessDashboard
         {
         }
 
+
         /// <summary>
         /// Preserves state associated with this page in case the application is suspended or the
         /// page is discarded from the navigation cache.  Values must conform to the serialization
@@ -57,3 +63,4 @@ namespace MyBusinessDashboard
         }
     }
 }
+

@@ -44,7 +44,7 @@ namespace MyBusinessDashboard
             //throw new NotImplementedException();
 
             TextBox User = (TextBox)UserBox;
-            this.Frame.Navigate(typeof(HomePage));
+            this.Frame.Navigate(typeof(ApplicationHome));
 
         }
 

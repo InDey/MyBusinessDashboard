@@ -54,7 +54,7 @@ namespace MyBusinessDashboard
         {
             //Create calendar object to get current day & time
             Calendar calendar = new Calendar();
-            curDatetb.Text = calendar.DayOfWeekAsString() + " " + DateTime.Now.ToString("hh:mm:ss tt");
+            //curDatetb.Text = calendar.DayOfWeekAsString() + " " + DateTime.Now.ToString("hh:mm:ss tt");
         }
         private void ContactBtn_OnClick(object sender, RoutedEventArgs e)
         {
@@ -62,7 +62,7 @@ namespace MyBusinessDashboard
         }
         private void CalendarBtn_OnClick(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(CreateCalendar));
+            this.Frame.Navigate(typeof(Calendar));
         }
         private void FileBtn_OnClick(object sender, RoutedEventArgs e)
         {
@@ -70,7 +70,7 @@ namespace MyBusinessDashboard
         }
         private void NewsBtn_OnClick(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(NewsHome));
+            this.Frame.Navigate(typeof(ApplicationHome));
         }
         private void EmailBtn_OnClick(object sender, RoutedEventArgs e)
         {

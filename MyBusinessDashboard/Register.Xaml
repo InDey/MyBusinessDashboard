@@ -1,4 +1,4 @@
-<common:LayoutAwarePage
+﻿<common:LayoutAwarePage
     x:Name="pageRoot"
     x:Class="MyBusinessDashboard.Register"
     DataContext="{Binding DefaultViewModel, RelativeSource={RelativeSource Self}}"
@@ -10,11 +10,14 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
+
     <Page.Resources>
+
 
         <!-- TODO: Delete this line if the key AppName is declared in App.xaml -->
         <x:String x:Key="AppName">My Application</x:String>
     </Page.Resources>
+
 
     <!--
         This grid acts as a root panel for the page that defines two rows:
@@ -26,6 +29,7 @@
             <RowDefinition Height="140"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
+
 
         <!-- Back button and page title -->
         <Grid>
@@ -54,12 +58,15 @@
         <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="582" Margin="380,10,0,0" Grid.Row="1" Stroke="White" VerticalAlignment="Top" Width="2"/>
         <Rectangle Fill="White" HorizontalAlignment="Left" Height="582" Margin="970,10,0,0" Grid.Row="1" Stroke="White" VerticalAlignment="Top" Width="2"/>
 
+
         <VisualStateManager.VisualStateGroups>
+
 
             <!-- Visual states reflect the application's view state -->
             <VisualStateGroup x:Name="ApplicationViewStates">
                 <VisualState x:Name="FullScreenLandscape"/>
                 <VisualState x:Name="Filled"/>
+
 
                 <!-- The entire page respects the narrower 100-pixel margin convention for portrait -->
                 <VisualState x:Name="FullScreenPortrait">
@@ -69,6 +76,7 @@
                         </ObjectAnimationUsingKeyFrames>
                     </Storyboard>
                 </VisualState>
+
 
                 <!-- The back button and title have different styles when snapped -->
                 <VisualState x:Name="Snapped">
@@ -85,3 +93,4 @@
         </VisualStateManager.VisualStateGroups>
     </Grid>
 </common:LayoutAwarePage>
+
