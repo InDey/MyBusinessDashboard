@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -19,33 +19,23 @@ namespace MyBusinessDashboard
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class MainPage : Page
+    public sealed partial class NewsHome : Page
     {
-        public MainPage()
+        public NewsHome()
         {
             this.InitializeComponent();
-            TextBox userID = (TextBox)this.UserBox;
-            string Password;
-            Button Login;
-            Login = LoginBtn;
-            Login.Click += Login_Click;
-            userID.Text = "Username";
-            Password = PassBox.Password;
+
             RegisterBtn.PointerReleased += registerBtn_OnClick;
+            LoginBtn.Click += loginBtn_OnClick;
         }
 
         private void registerBtn_OnClick(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(Register));
         }
-        
-        void Login_Click(object sender, RoutedEventArgs e)
+        private void loginBtn_OnClick(object sender, RoutedEventArgs e)
         {
-            //throw new NotImplementedException();
-
-            TextBox User = (TextBox)UserBox;
-            this.Frame.Navigate(typeof(HomePage));
-
+            this.Frame.Navigate(typeof(ApplicationHome));
         }
 
         /// <summary>
@@ -56,6 +46,5 @@ namespace MyBusinessDashboard
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
         }
-
     }
 }
